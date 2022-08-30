@@ -1,0 +1,38 @@
+{
+    "root": true,
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module",
+        "project": "./tsconfig.json"
+    },
+    "env": {
+        "browser": true,
+        "node": true
+    },
+    "plugins": ["@typescript-eslint", "react", "react-hooks", "prettier"],
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:react/recommended",
+        "plugin:react-hooks/recommended",
+        "plugin:prettier/recommended"
+    ],
+    "rules": {
+        "@typescript-eslint/no-unsafe-assignment": 0,
+        "react/jsx-uses-react": 0,
+        "react/react-in-jsx-scope": 0
+    },
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        },
+        "react": {
+            "version": "detect"
+        }
+    },
+    "ignorePatterns": ["/build", "/*.js"]
+}
